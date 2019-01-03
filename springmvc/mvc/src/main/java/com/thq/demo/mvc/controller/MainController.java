@@ -23,7 +23,7 @@ public class MainController {
 	@RequestMapping(value = "welcome", method = RequestMethod.GET)
 	@ResponseBody
 	public String welcome() {
-		return "Hello MVC!";
+		return "Hello Spring MVC!";
 	}
 
 	@ResponseBody
