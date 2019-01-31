@@ -1,0 +1,343 @@
+@charset "UTF-8";
+.myContainer .ftsp-dragresize {
+  font-size: 10px;
+  line-height: 1em;
+  position: absolute;
+  color: #f33;
+  border: 2px solid #99f;
+  background: url(about:blank);
+  background-color: transparent; }
+
+/*The main mouse handle that moves the whole element.You can apply to the same tag as wwwzzjsnet if you want.*/
+.drsMoveHandle {
+  height: 20px;
+  cursor: move;
+  border-bottom: 1px solid ftspColor(82);
+  background-color: ftspColor(84); }
+
+/*The DragResize object name is automatically applied to all generatedcorner resize handles,as well as one of the individual classes below.*/
+.dragresize {
+  font-size: 1px;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border: 1px solid ftspColor(81);
+  background: ftspColor(87); }
+
+/*Individual corner classes - required for resize support.These are based on the object name plus the handle ID.*/
+.dragresize-tl {
+  top: -8px;
+  left: -8px;
+  cursor: nw-resize; }
+
+.dragresize-tm {
+  top: -8px;
+  left: 50%;
+  margin-left: -4px;
+  cursor: n-resize; }
+
+.dragresize-tr {
+  top: -8px;
+  right: -8px;
+  cursor: ne-resize; }
+
+.dragresize-ml {
+  top: 50%;
+  left: -8px;
+  margin-top: -4px;
+  cursor: w-resize; }
+
+.dragresize-mr {
+  top: 50%;
+  right: -8px;
+  margin-top: -4px;
+  cursor: e-resize; }
+
+.dragresize-bl {
+  bottom: -8px;
+  left: -8px;
+  cursor: sw-resize; }
+
+.dragresize-bm {
+  bottom: -8px;
+  left: 50%;
+  margin-left: -4px;
+  cursor: s-resize; }
+
+.dragresize-br {
+  right: -8px;
+  bottom: -8px;
+  cursor: se-resize; }
+
+.invoice-bg {
+  position: absolute;
+  width: 100%; }
+  .invoice-bg.current {
+    display: inline-block; }
+
+/** @author yezhouan @DataTime2016-01-20T17:57:41+0800 */
+.red {
+  color: red !important; }
+
+.rotate90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  tranform: rotate(90deg); }
+
+.rotate180 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  tranform: rotate(180deg); }
+
+.rotate270 {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  tranform: rotate(270deg); }
+
+.getInvoice_wrap {
+  position: relative;
+  overflow: hidden;
+  height: 312px;
+  padding: 10px;
+  border-right: 1px solid ftspColor(85);
+  border-left: 1px solid ftspColor(85); }
+  .getInvoice_wrap.nodata {
+    background: url(/skin/image/ftsp-portal/fp/yxfp/bg-nodata.png) no-repeat;
+    background-position: center 140px; }
+    .getInvoice_wrap.nodata:before {
+      font-size: 13px;
+      position: absolute;
+      left: 50%;
+      margin-top: 230px;
+      margin-left: -76px;
+      content: '您当前还没有上传影像发票';
+      color: #bbb; }
+  .getInvoice_wrap .part {
+    position: relative;
+    display: none;
+    overflow: auto;
+    box-sizing: border-box;
+    height: 100%; }
+    .getInvoice_wrap .part.active {
+      display: block; }
+
+.myContainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%; }
+
+.row {
+  padding: 0 10px; }
+  .row:after {
+    clear: both; }
+
+.row:before,
+.row:after {
+  display: table;
+  content: ' '; }
+
+.col {
+  float: left; }
+  .col.left {
+    width: 560px; }
+  .col.right {
+    width: 420px; }
+
+.thumbnail_bar {
+  position: relative;
+  box-sizing: border-box;
+  height: 107px;
+  padding: 0 33px;
+  border-top: 1px solid ftspColor(85);
+  border-bottom: 1px solid ftspColor(85); }
+  .thumbnail_bar .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 100%;
+    background-image: url(/skin/image/ftsp-portal/fp/back.png);
+    background-repeat: no-repeat;
+    background-position: center; }
+  .thumbnail_bar .next {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 100%;
+    background-image: url(/skin/image/ftsp-portal/fp/next.png);
+    background-repeat: no-repeat;
+    background-position: center; }
+
+.thumbnail_bar .back:hover,
+.thumbnail_bar .back:active {
+  background-image: url(/skin/image/ftsp-portal/fp/back_active.png); }
+
+.thumbnail_bar .next:hover,
+.thumbnail_bar .next:active {
+  background-image: url(/skin/image/ftsp-portal/fp/next_active.png); }
+
+.thumbnail-toolbar {
+  line-height: 25px;
+  height: 25px;
+  padding-right: 5px;
+  text-align: right; }
+
+.thumbs_gallery {
+  position: relative;
+  overflow: hidden;
+  height: 80px; }
+  .thumbs_gallery ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    white-space: nowrap; }
+    .thumbs_gallery ul li {
+      position: relative;
+      display: inline-block;
+      height: 100%;
+      padding-top: 5px;
+      vertical-align: middle; }
+      .thumbs_gallery ul li a img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        vertical-align: top; }
+  .thumbs_gallery .fpimg-wrap {
+    display: block;
+    width: 88px;
+    height: 65px;
+    padding-left: 9px; }
+  .thumbs_gallery li.active img {
+    border: 1px solid ftspColor(31); }
+  .thumbs_gallery li:hover .icons-std-010205 {
+    display: block; }
+  .thumbs_gallery .icons-std-010205 {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    display: none;
+    margin-right: -8px;
+    padding: 0; }
+
+.ocr_toolbar {
+  line-height: 40px;
+  position: relative;
+  height: 40px;
+  text-align: center;
+  background-color: #eef2f6; }
+  .ocr_toolbar span {
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    color: ftspColor(82); }
+  .ocr_toolbar .btn-ui {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -13px; }
+    .ocr_toolbar .btn-ui.disabled {
+      cursor: default;
+      background-color: grey; }
+
+.ui-btn {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 13px;
+  vertical-align: middle;
+  background-repeat: no-repeat; }
+
+.btn-larger,
+.btn-larger:active {
+  background-image: url(/skin/image/ftsp-portal/fp/larger.png); }
+
+.btn-smaller,
+.btn-smaller:active {
+  background-image: url(/skin/image/ftsp-portal/fp/smaller.png); }
+
+.btn-rotate,
+.btn-rotate:active {
+  background-image: url(/skin/image/ftsp-portal/fp/rotate.png); }
+
+.invoice_ocr > p {
+  line-height: 50px;
+  text-align: center;
+  background-color: #eef2f6; }
+.invoice_ocr ol {
+  overflow-y: auto;
+  height: 389px;
+  padding-bottom: 20px; }
+  .invoice_ocr ol li p {
+    line-height: 32px;
+    padding-left: 15px;
+    color: ftspColor(82); }
+  .invoice_ocr ol li input {
+    line-height: 10px;
+    display: inline-block;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    border: 0;
+    background-color: transparent; }
+  .invoice_ocr ol li label {
+    color: ftspColor(83); }
+.invoice_ocr .part + div {
+  margin-top: 5px; }
+.invoice_ocr .input-wrap {
+  line-height: 26px;
+  box-sizing: border-box;
+  width: 370px;
+  height: 26px;
+  margin-left: 20px;
+  padding: 0 1em;
+  white-space: nowrap;
+  border: 1px solid ftspColor(85); }
+  .invoice_ocr .input-wrap.active {
+    border: 1px solid #3f9bef; }
+.invoice_ocr div + div.input-wrap {
+  border-top: none; }
+.invoice_ocr .ocrMx .input-wrap {
+  margin-left: 0; }
+.invoice_ocr .ocrMx.part + div {
+  margin-top: 15px; }
+
+.ocrMx {
+  padding-left: 20px; }
+
+.mx_outline {
+  position: relative;
+  width: 370px;
+  border: 1px solid transparent; }
+
+.icon_delmx {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background-image: url(/skin/image/ftsp-portal/fp/delMx.png);
+  background-repeat: no-repeat;
+  background-position: center; }
+  .icon_delmx:active {
+    background-image: url(/skin/image/ftsp-portal/fp/delMx.png); }
+
+.add-invoice {
+  display: none; }
+
+/*# sourceMappingURL=dragresise.css.map */
