@@ -47,12 +47,12 @@
         <button>选择</button>
     </div>
 </div>
-
-<div style="text-align: center; display: inline-block" class="control">
+<div id="page-content" style="display: inline"></div>
+<div style="text-align: left;" class="control">
     <input id="switchImage" type="file" accept="image/jpeg, image/png">
     <button id="recogniteImage">识别</button>
 </div>
-<div id="page-content" style="display: inline"></div>
+
 <script src="/static/script/js/myControl.js"></script>
 </body>
 </html>
