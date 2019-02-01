@@ -25,6 +25,13 @@
         .control button {
             margin: 0 10px;
         }
+
+        ul {
+            display: inline-block;
+        }
+        li {
+            list-style-type: none;
+        }
     </style>
     <script src="/static/script/js/jquery-1.7.2.js?r=version"></script>
     <script src="/static/script/js/dragresize.js?r=version"></script>
@@ -34,7 +41,7 @@
 <body>
 
 <div id="dragWrap" class="part" style="position: relative; width: 700px; height: 650px; display: inline-block">
-    <img id="sourceImg" src="/static/images/123.png" width="684" height="648" alt=""
+    <img id="sourceImg" src="/static/images/sanfendi.jpg" width="684" height="648" alt=""
          style="top: 0; left: 0; position: absolute">
     <div class="myContainer" id="selectImage" style="display: none; width: 700px; height: 650px">
         <button>选择</button>
@@ -42,10 +49,10 @@
 </div>
 
 <div style="text-align: center; display: inline-block" class="control">
-    <button id="cutImage">截取</button>
+    <input id="switchImage" type="file" accept="image/jpeg, image/png">
     <button id="recogniteImage">识别</button>
 </div>
-<div id="page-content"></div>
+<div id="page-content" style="display: inline"></div>
 <script src="/static/script/js/myControl.js"></script>
 </body>
 </html>

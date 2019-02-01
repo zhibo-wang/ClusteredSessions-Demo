@@ -12,7 +12,8 @@
 			this.elem = elem; //jqeury 元素对象
 			var _data = this.elem.parent('.part').data('ocrFp');
 			this.coordObj = _data.zbList; //传进来的坐标值的对象
-			this.tgImg = this.elem.siblings('canvas'); //目标发票图片jquery对象
+			// this.tgImg = this.elem.siblings('canvas'); //目标发票图片jquery对象
+			this.tgImg = this.elem.siblings('img'); //目标发票图片jquery对象
 			this.scaleLeval = 0;
 			this.rotateLeval = 0; //用于判断角度的
 			if (!_data.ocrAngle) {
@@ -176,6 +177,27 @@
 					current.push(coord);
 				});
 				return current;
+			},
+			//计算图片缩放比例（长和宽）
+			calImgRadio: function () {
+				var radio = {};
+                radio.x = (this._getImgActualSize().width / this.tgImg.width()).toFixed(2); //获取目标图片的实际宽度并算出缩放比例
+                radio.y = (this._getImgActualSize().height / this.tgImg.height()).toFixed(2); //获取目标图片的实际宽度并算出缩放比例
+                return radio;
+			},
+			//计算截图区域再实际图片的坐标和长宽
+			calCutImgCoordinate: function (radio) {
+                var current = [],
+                    _radio = radio || 1;
+                this.elem.find('.ftsp-dragresize').each(function (index, el) {
+                    var coord = {};
+                    coord.x1 = parseFloat($(this).css('left')) * _radio.x;
+                    coord.y1 = parseFloat($(this).css('top')) * _radio.y;
+                    coord.x2 = (parseFloat($(this).css('left')) + parseFloat($(this).width())) * _radio.x;
+                    coord.y2 = (parseFloat($(this).css('top')) + parseFloat($(this).height())) * _radio.y;
+                    current.push(coord);
+                });
+                return current;
 			},
 			//转换为后台所需要的数据结构
 			zbList: function () {

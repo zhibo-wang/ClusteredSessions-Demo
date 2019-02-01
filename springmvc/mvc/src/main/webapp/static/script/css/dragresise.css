@@ -12,17 +12,17 @@
 .drsMoveHandle {
   height: 20px;
   cursor: move;
-  border-bottom: 1px solid ftspColor(82);
-  background-color: ftspColor(84); }
+  border-bottom: 1px solid #666;
+  background-color: #ccc; }
 
 /*The DragResize object name is automatically applied to all generatedcorner resize handles,as well as one of the individual classes below.*/
 .dragresize {
+  border: 1px solid red;
   font-size: 1px;
   position: absolute;
   width: 5px;
   height: 5px;
-  border: 1px solid ftspColor(81);
-  background: ftspColor(87); }
+  background: #eee; }
 
 /*Individual corner classes - required for resize support.These are based on the object name plus the handle ID.*/
 .dragresize-tl {
@@ -284,7 +284,7 @@
   .invoice_ocr ol li p {
     line-height: 32px;
     padding-left: 15px;
-    color: ftspColor(82); }
+    color: #666; }
   .invoice_ocr ol li input {
     line-height: 10px;
     display: inline-block;
@@ -306,7 +306,7 @@
   margin-left: 20px;
   padding: 0 1em;
   white-space: nowrap;
-  border: 1px solid ftspColor(85); }
+  border: 1px solid #e0e0e0; }
   .invoice_ocr .input-wrap.active {
     border: 1px solid #3f9bef; }
 .invoice_ocr div + div.input-wrap {
