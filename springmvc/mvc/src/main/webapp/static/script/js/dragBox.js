@@ -112,7 +112,7 @@
 						top: (val.y1) / _ratio,
 						width: (val.x2 - val.x1) / _ratio,
 						height: (val.y2 - val.y1) / _ratio
-					}).text(this._match(val.type)).
+					}).text(this._match(val.type) + (i+1)).
 						data('item-id', val.id); //纠正框显示的文字
 					this.elem.append($html);
 				}

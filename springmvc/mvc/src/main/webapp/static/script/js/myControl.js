@@ -9,7 +9,8 @@ var item = {
             width: 140.00,
             height: 400.00,
             type: 'dragTest',
-            fpOcrId: '1'
+            fpOcrId: '1',
+            name: '切片1'
         },
         {
             x: 390,
@@ -17,7 +18,35 @@ var item = {
             width: 200.00,
             height: 400.00,
             type: 'dragTest',
-            fpOcrId: '1'
+            fpOcrId: '1',
+            name: '切片2'
+        },
+        {
+            x: 600,
+            y: 30,
+            width: 200.00,
+            height: 400.00,
+            type: 'dragTest',
+            fpOcrId: '1',
+            name: '切片3'
+        },
+        {
+            x: 810,
+            y: 30,
+            width: 200.00,
+            height: 400.00,
+            type: 'dragTest',
+            fpOcrId: '1',
+            name: '切片4'
+        },
+        {
+            x: 1020,
+            y: 30,
+            width: 200.00,
+            height: 400.00,
+            type: 'dragTest',
+            fpOcrId: '1',
+            name: '切片5'
         }
     ],
     mxList: []
@@ -30,9 +59,8 @@ img.onload = function() {
     $('#selectImage').show();
 }
 
-var imgApi = null;
 $("#selectImage").on('click', function () {
-    imgApi = $(this).dragBox();
+    $(this).dragBox();
 })
 
 $('#switchImage').on('change', function () {
