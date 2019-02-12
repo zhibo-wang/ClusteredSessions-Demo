@@ -46,8 +46,9 @@
     <div class="myContainer" id="selectImage" style="display: none; width: 700px; height: 650px">
         <button>选择</button>
     </div>
+
 </div>
-<div id="page-content" style="display: inline"></div>
+<div id="page-content" style="width: 600px; height: 600px; display: inline-block; overflow: auto"></div>
 <div style="text-align: left;" class="control">
     <input id="switchImage" type="file" accept="image/jpeg, image/png">
     <button id="recogniteImage">识别</button>
